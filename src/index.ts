@@ -13,3 +13,4 @@ const calculator = new AreaCalculator(shapes);
 console.log( 'string\n', calculator.outPutString() );
 console.log( 'html\n', calculator.outPutHTML() );
 console.log( 'pug\n', calculator.outPutPug() );
+console.log( 'JSON\n', calculator.outPutJSON() );

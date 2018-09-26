@@ -36,4 +36,11 @@ export class AreaCalculator {
   outPutPug(){
       return `h1 La suma de areas es: ${this.sumAreas()}`;
   }
+
+  outPutJSON(){
+    return `
+    {
+        "suma": ${this.sumAreas()}
+    }`;
+  }
 }
