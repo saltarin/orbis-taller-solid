@@ -19,28 +19,4 @@ export class AreaCalculator {
     });
     return sum;
   }
-
-  outPutString(){
-      return `La suma es: ${this.sumAreas()}`;
-  }
-
-  outPutHTML(){
-    return `
-    <html>
-        <body>
-            <h1>La suma de areas es: ${this.sumAreas()}</h1>
-        </body>
-    </html>`;
-  }
-
-  outPutPug(){
-      return `h1 La suma de areas es: ${this.sumAreas()}`;
-  }
-
-  outPutJSON(){
-    return `
-    {
-        "suma": ${this.sumAreas()}
-    }`;
-  }
 }

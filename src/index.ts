@@ -1,5 +1,6 @@
 import { AreaCalculator } from './areaCalculator';
 import { Circle, Square } from './shapes';
+import { AreaFormatter } from './formatter';
 
 const shapes = [
   new Circle(1),
@@ -9,8 +10,9 @@ const shapes = [
 ]
 
 const calculator = new AreaCalculator(shapes);
+const formatter = new AreaFormatter(calculator);
 
-console.log( 'string\n', calculator.outPutString() );
-console.log( 'html\n', calculator.outPutHTML() );
-console.log( 'pug\n', calculator.outPutPug() );
-console.log( 'JSON\n', calculator.outPutJSON() );
+console.log( 'string\n', formatter.outPutString() );
+console.log( 'html\n', formatter.outPutHTML() );
+console.log( 'pug\n', formatter.outPutPug() );
+console.log( 'JSON\n', formatter.outPutJSON() );
