@@ -1,22 +1,13 @@
-import { Circle, Square } from './shapes';
+import { Shape } from './shapes';
 
 export class AreaCalculator {
 
-  constructor(private shapes: (Circle|Square)[]){
+  constructor(private shapes: Shape[]){
   }
 
   sumAreas(): number{
     let sum = 0;
-    this.shapes.forEach( (shape) => {
-      if(shape instanceof Circle){
-        const circle = (shape as Circle);
-        sum += circle.getRadius() * circle.getRadius() * Math.PI;
-      }
-      else{
-        const square = (shape as Square);
-        sum += square.getLength() * square.getLength();
-      }
-    });
+    this.shapes.forEach( (shape) => sum += shape.area());
     return sum;
   }
 }

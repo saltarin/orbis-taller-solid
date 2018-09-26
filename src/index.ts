@@ -1,12 +1,13 @@
 import { AreaCalculator } from './areaCalculator';
-import { Circle, Square } from './shapes';
+import { Circle, Square, Rectangle } from './shapes';
 import { AreaFormatter } from './formatter';
 
 const shapes = [
   new Circle(1),
   new Square(2),
   new Circle(3),
-  new Square(4)
+  new Square(4),
+  new Rectangle(2,2)
 ]
 
 const calculator = new AreaCalculator(shapes);
