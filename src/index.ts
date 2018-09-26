@@ -10,4 +10,4 @@ const shapes = [
 
 const calculator = new AreaCalculator(shapes);
 
-console.log( calculator.sumAreas() );
+console.log( 'string\n', calculator.outPutString() );

@@ -19,4 +19,8 @@ export class AreaCalculator {
     });
     return sum;
   }
+
+  outPutString(){
+      return `La suma es: ${this.sumAreas()}`;
+  }
 }
