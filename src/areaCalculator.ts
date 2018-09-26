@@ -23,4 +23,13 @@ export class AreaCalculator {
   outPutString(){
       return `La suma es: ${this.sumAreas()}`;
   }
+
+  outPutHTML(){
+    return `
+    <html>
+        <body>
+            <h1>La suma de areas es: ${this.sumAreas()}</h1>
+        </body>
+    </html>`;
+  }
 }
