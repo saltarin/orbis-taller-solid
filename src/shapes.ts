@@ -13,3 +13,13 @@ export class Square {
     return this.length;
   }
 }
+
+export class Rectangle {
+    constructor(private base: number, private height: number){}
+    getBase(){
+        return this.base;
+    }
+    getHeight(){
+        return this.height;
+    }
+}
