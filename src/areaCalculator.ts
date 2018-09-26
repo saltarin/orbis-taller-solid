@@ -8,51 +8,15 @@ export class AreaCalculator {
   sumAreas(): number{
     let sum = 0;
     this.shapes.forEach( (shape) => {
-      if(shape instanceof Square){
-        sum += shape.getLength() * shape.getLength();
+      if(shape instanceof Circle){
+        const circle = (shape as Circle);
+        sum += circle.getRadius() * circle.getRadius() * Math.PI;
       }
       else{
-        sum += shape.getRadius() * shape.getRadius() * Math.PI;
+        const square = (shape as Square);
+        sum += square.getLength() * square.getLength();
       }
     });
     return sum;
   }
-
-  outPutConsole(): string{
-    return `Suma de areas es: ${this.sumAreas()}`;
-  }
-
-
-
-
-
-
-
-
-
-
-
-  /*
-  outPutHtml(): string{
-    return `
-    <html>
-      <body>
-        <div>
-          <H1>La suma de areas es: ${this.sumAreas()}</H1>
-        </div>
-      </body>
-    </html>`;
-  }
-
-  outPutJSON():string {
-    return `
-    {
-      "suma": ${this.sumAreas()}
-    }`;
-  }
-
-  outPutJade():string {
-    return `h1 La suma de areas es ${this.sumAreas()}`;
-  }
-  */
 }
