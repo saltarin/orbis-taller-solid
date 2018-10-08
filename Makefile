@@ -1,9 +1,10 @@
 tsc:
 	rm -rf build/*
-	tsc
+	npm run tsc
 
-open-close:
-	node build/open-close/index.js
+run:
+	node build/index.js
 
-single-responsability:
-	node build/single-responsability/index.js
+start: 
+	@make tsc
+	@make run
